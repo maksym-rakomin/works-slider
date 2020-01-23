@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Oleo+Script|Poppins:400,500,700&display=swap')
+
+   
+
+@import 'normalize'
+@import 'mixins'
+@import 'variables'
+@import 'slick'
+
+
+
+
+
+* 
+    box-sizing: border-box
+html 
+    height: 100%
+    font-size: 10px
+
+body 
+    min-height: 100%
+    @include text($text-color, $text-font, 5rem, 400, 1.1)
+
+.container
+    max-width: 1230px
+    width: 96%
+    margin: 0 auto
+
+a 
+    text-decoration: none
+    color: #000
+
+.header
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 60px 20px
+    text-align: center
+    overflow: hidden
+    position: relative
+
+    &__subtitle
+        font-size: 1.8rem
+        font-weight: 700
+
+    &__title
+        margin: 0 0 100px
+        overflow: hidden
+        max-height: 33rem
+
+.img
+
+    &__wrap
+        position: relative
+        padding-top: 123%
+        overflow: hidden
+
+    &__content
+        @include posCenter
+        min-width: 100%
+        min-height: 100%
+    
+    &__overlay
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: fade-out($green, .8)
+        opacity: 0
+        color: $white
+        padding: 40px 30px
+        @include hover
+            opacity: 1
+
+    &__title
+        font-size: 2.8rem
+        position: absolute
+        bottom: 13%
+        padding: 0
+        padding-right: 120px
+        text-align: left
+        max-height: 6rem
+        overflow: hidden
+
+    &__subtitle
+        font-size: 1.2rem
+        position: absolute
+        bottom: 11%
+        padding: 0
+        max-height: 2.7rem
+        overflow: hidden
+        padding-right: 120px
+        text-align: left
+  
+.slide
+
+    &__arrow
+        width: 4.5rem
+        height: 4.5rem
+        border: 1px solid black
+        display: block
+        margin: 0 auto 
+        border-radius: 50%
+        background: url('../img/arrow.png') no-repeat center
+        transition: all .25s ease-in
+        @include hover
+            background-position: center bottom
+        &--rotate-left
+            position: absolute
+            left: -5%
+            top: 45%
+            transform: rotate(90deg) 
+        &--rotate-right
+            position: absolute
+            right: 9%
+            top: 45%
+            transform: rotate(270deg) 
+.slider
+    left: 7%
+.slick-slide
+    margin: 0 25px
+
+
+
+
+
+
+
+
+
